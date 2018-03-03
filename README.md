@@ -31,8 +31,8 @@ A simple lightweight tool for parallelizing tasks across multiple processes
         
     	   setTimeout(() => {
     	       const result = params.myNumber + 1;
-    	   	   console.log('Task Complete!!!');
-    	   	   this.complete(result);
+    	       console.log('Task Complete!!!');
+               this.complete(result);
     	   }, 1000);
         }	
 

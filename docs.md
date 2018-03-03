@@ -3,7 +3,7 @@
 #### `class Batka`
 
   * `options` - configuration object passed in the constructor
-     * `concurrency` - number of workker processes to be spawned. The default is the number of CPU cores -1
+     * `concurrency` - number of worker processes to be spawned. The default is the number of CPU cores -1
   * `registerTask(taskName, pathToTask)` - registeres a new Task
      * `taskName` - a name for the task to be used later for the task execution
      * `pathToTask` - an absolute path to the task definition file
