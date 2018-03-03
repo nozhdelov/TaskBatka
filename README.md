@@ -2,7 +2,7 @@
 
 A simple lightweight tool for parallelizing tasks across multiple processes
 
-###[Api Reference](docs.md)
+### [Api Reference](docs.md)
 
 ## Example usage
 
@@ -25,15 +25,16 @@ A simple lightweight tool for parallelizing tasks across multiple processes
 #### and for the  'MyTask.js' file
     const Task = require('task-batka').Task;
 
-        class MyTask extends Task {
-    	   run(params){
+    class MyTask extends Task {
         
-    	   	   setTimeout(() => {
-    	   		  const result = params.myNumber + 1;
-    	   		  console.log('Task Complete!!!');
-    	   		  this.complete(result);
-    	   	   }, 1000);
-    	   }	
+        run(params){
+        
+    	   setTimeout(() => {
+    	       const result = params.myNumber + 1;
+    	   	   console.log('Task Complete!!!');
+    	   	   this.complete(result);
+    	   }, 1000);
+        }	
 
     }
 
