@@ -1,0 +1,3 @@
+# API Reference
+
+class Bataka

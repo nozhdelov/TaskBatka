@@ -1,0 +1,25 @@
+{
+  "name": "task-batka",
+  "version": "0.0.4",
+  "description": "A lightweight librery for parallel task execution",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nozhdelov/TaskBatka.git"
+  },
+  "keywords": [
+    "parallel",
+    "tasks",
+    "child process",
+    "process"
+  ],
+  "author": "Ivan Nozhdelov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nozhdelov/TaskBatka/issues"
+  },
+  "homepage": "https://github.com/nozhdelov/TaskBatka#readme"
+}
