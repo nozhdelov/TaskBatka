@@ -1,7 +1,7 @@
 {
   "name": "task-batka",
-  "version": "0.0.5",
-  "description": "A lightweight librery for parallel task execution",
+  "version": "0.0.6",
+  "description": "A lightweight library for parallel task execution",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +13,7 @@
   "keywords": [
     "parallel",
     "tasks",
+    "workers",
     "child process",
     "process"
   ],
