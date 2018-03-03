@@ -1,6 +1,6 @@
 # API Reference
 
-** `class Batka` **
+#### `class Batka`
 
   * `options` - configuration object passed in the constructor
      * `concurrency` - number of workker processes to be spawned. The default is the number of CPU cores -1
@@ -13,9 +13,10 @@
    * `quit()` - terminate all worker processes allowing the host process to exit
    * `quitWhenEmpty()` - wait for all running tasks to finish and terminats the worker processes
 
+___
 
 
-** `class Task` ** - all tasks must extend this class
+#### `class Task` - all tasks must extend this class
 
    * `run(params)` - this is where the task code goes
       * `params` - a object with params passed from Batka.addTask
