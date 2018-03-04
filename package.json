@@ -1,6 +1,6 @@
 {
   "name": "task-batka",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A lightweight library for parallel task execution",
   "main": "index.js",
   "scripts": {
