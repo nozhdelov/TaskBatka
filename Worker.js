@@ -23,6 +23,11 @@ class Worker {
                 break;
             }
         });
+
+	this.process.on('uncaughtException', (err) => {
+        	this.process.send({type : 'status.error', error : err.message});
+        });
+
         
         
         this.process.send({type : 'status.change', value : 'free'});

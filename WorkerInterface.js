@@ -10,6 +10,7 @@ class WorkerInterface extends EventEmitter {
         
         this.messageHandlesrs = {
             'status.change' : message => this.status = message.value,
+	    'status.error' : message => this.restartProcess(message.error),
             'error' : message => this.emit(message.value),
             'task.complete' : message => this.completeTask(message.id, message.result),
             'task.error' : message => this.failTask(message.id, message.error)
@@ -34,7 +35,6 @@ class WorkerInterface extends EventEmitter {
         });
         this.process.on('error', (code, signal) => {
             this.restartProcess();
-            this.emit('exit', code, signal);
         });
         
         this.process.on('message', (message) => {
@@ -45,9 +45,12 @@ class WorkerInterface extends EventEmitter {
     }
     
     
-    restartProcess(){
+    restartProcess(reason){
+	Object.keys(this.runningTasks).forEach(taskId => this.failTask(taskId, reason));
         this.process.removeAllListeners();
-        this.process.disconnect();
+	if(this.process.connected){
+		this.process.disconnect();
+	}
         this.process.kill();
         this.initProcess();
     }
@@ -84,7 +87,10 @@ class WorkerInterface extends EventEmitter {
     kill() {
         this.removeAllListeners();
         this.process.removeAllListeners();
-        this.process.disconnect();
+	if(this.process.connected){
+		this.process.disconnect();
+	}
+        
         this.process.kill();
     }
     
