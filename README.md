@@ -89,7 +89,7 @@ But what if our tasks have some slow and expensive initialization or we realy ne
 
     app.listen(3000, () => console.log('Example app listening on port 3000!'));
 
-####and for the task `Users.js`
+#### and for the task `Users.js`
 
     const Task = require('../../index.js').Task;
     const redis = require('redis');
