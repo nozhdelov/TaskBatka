@@ -11,7 +11,7 @@
    * `execute(task, data, method)` - executes the task in a worker process. Returns a promise to be fullfiled with the result or the error
       * `task` - the name provided in the task registration
       * `data` - object with params that will be passed to the task's run method while execution
-      * `method` - Optional. Which method if the task should handle this sexecution. The default is the `run` method
+      * `method` - Optional. Which method of the task should handle this execution. The default is the `run` method
    * `quit()` - terminate all worker processes allowing the host process to exit
    * `quitWhenEmpty()` - wait for all running tasks to finish and terminats the worker processes
 
