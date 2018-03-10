@@ -1,4 +1,4 @@
 module.exports = {
-	"Task" : require('./Task.js'),
-	"Batka" : require('./TaskBatka.js')
+	"Task" : require('./lib/Task.js'),
+	"Batka" : require('./lib/TaskBatka.js')
 };
