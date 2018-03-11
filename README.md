@@ -22,7 +22,7 @@ So lets say for exampe you have 1000 tasks to run on a 8 core system. By default
 
     let promises = [];
     for(let i = 1; i < 100; i++){
-    	promises.push(tb.addTask('MyTask', {myNumber : i}));
+    	promises.push(tb.execute('MyTask', {myNumber : i}));
     }
 
     Promise.all(promises).then(console.log).catch(console.log);
