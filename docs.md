@@ -21,7 +21,7 @@ ___
 #### `class Task` - all tasks must extend this class
 
    * `run(params)` - this is where the task code goes
-      * `params` - a object with params passed from `Batka.addTask`
+      * `params` - a object with params passed from `Batka.execute`
    * `init` - any code needed for task initialization.
    * `complete(result)` - completes the curent task with the `result` allowing the worker to take other tasks
       * `result` - the result from the task esecution. It will be used to resolve the promise returned from `Batka.addTask`

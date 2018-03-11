@@ -48,6 +48,9 @@ So lets say for exampe you have 1000 tasks to run on a 8 core system. By default
 
 
 
+**Important** - Inside the `run` method either `complete` or `error` method must be called at some point. This frees the worker process to take on more tasks.
+
+
 ## Recomendations about concurrency
 * If you have high CPU intensive tasks like for example image processing, then the deafault concurrency settings (number of CPU cores - 1) will probaply work good enough for you. This will utilize all of your CPU resources to finish the tasks as fast as possible.
 * If your tasks include mixture of IO waiting and then some CPU work (for example downloading large JSON payloads and then decoding them) it may be a good idea to increase the concurrency settings. In these cases more workers will utilize the CPU better.
@@ -126,7 +129,7 @@ But what if our tasks have some slow and expensive initialization or we realy ne
     }
 
 
-module.exports = Users;
+    module.exports = Users;
 
 
 
