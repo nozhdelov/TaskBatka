@@ -24,3 +24,5 @@ for(let i = 100; i > 0; i--){
 }
 
 Promise.all(promises2).then(console.log).catch(console.log);
+
+tb.quitWhenEmpty();
