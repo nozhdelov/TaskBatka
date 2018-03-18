@@ -8,7 +8,7 @@ A simple lightweight tool for parallelizing tasks across multiple processes
 ## How does it work
 Just spawning a worker process for every task can be very expensive and inefficient (and in some cases impossible). This is why instead, `task-batka` spawns a few workers in advance and then brokers the tasks between them until all the tasks are completed.
 
-So lets say for exampe you have 1000 tasks to run on a 8 core system. By default `task-batka` will create a pool of 7 workers and distribute the execution of the task between them in an efficiant way.
+So lets say for example you have 1000 tasks to run on a 8 core system. By default `task-batka` will create a pool of 7 workers and distribute the execution of the task between them in an efficiant way.
 
 ## Example usage
 
@@ -48,7 +48,7 @@ So lets say for exampe you have 1000 tasks to run on a 8 core system. By default
 
 
 
-**Important** - Inside the `run` method either `complete` or `error` method must be called at some point. This frees the worker process to take on more tasks.
+**Important** - Inside the `run` method either `complete` or `error` method must be called at some point. This frees the worker process to take on more tasks. Alternatively it can just return a promise.
 
 
 ## Recomendations about concurrency
