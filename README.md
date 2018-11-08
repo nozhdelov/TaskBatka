@@ -67,7 +67,7 @@ But what if our tasks have some slow and expensive initialization or we realy ne
 
     const express = require('express');
     const app = express();
-    const Batka = require('../../index').Batka;
+    const Batka = require('task-batka').Batka;
     const fs = require('fs');
 
     const tb = new Batka();
@@ -94,7 +94,7 @@ But what if our tasks have some slow and expensive initialization or we realy ne
 
 #### and for the task `Users.js`
 
-    const Task = require('../../index.js').Task;
+    const Task = require('task-batka').Task;
     const redis = require('redis');
 
     class Users extends Task {
