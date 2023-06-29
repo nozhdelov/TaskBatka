@@ -1,6 +1,6 @@
 {
   "name": "task-batka",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "A lightweight library for parallel task execution",
   "main": "index.js",
   "scripts": {
@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/nozhdelov/TaskBatka/issues"
   },
-  "homepage": "https://github.com/nozhdelov/TaskBatka#readme"
+  "homepage": "https://github.com/nozhdelov/TaskBatka#readme",
+  "exports": {
+    "import": "./index.mjs",
+    "require": "./index.js"
+  }
 }
